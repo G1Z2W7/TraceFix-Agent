@@ -1,0 +1,62 @@
+name: Feature or change
+description: Propose one user-visible behavior or architecture boundary.
+title: "[Change]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Define the problem before the solution. Keep one Issue small enough for one reviewable Pull Request.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What fails, costs time, or prevents a user outcome?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected outcome
+      description: Describe observable behavior, not an implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: List the files, services, or contracts that may change.
+    validations:
+      required: true
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals
+      description: State what this Issue will not solve.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Use checkboxes and name the evidence for each criterion.
+      placeholder: |
+        - [ ] Behavior is observable through ...
+        - [ ] Failure case ... returns ...
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and rollback
+      description: What can break, and how can the change be disabled or reverted?
+    validations:
+      required: true
+  - type: textarea
+    id: learning
+    attributes:
+      label: Learning objective
+      description: What must the learner explain, run, and debug after this change?
+    validations:
+      required: true
